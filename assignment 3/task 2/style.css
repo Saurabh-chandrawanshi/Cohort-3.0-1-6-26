@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* image section */
+.main-image img{
+  position: absolute;
+    width: 100%;
+    object-fit: cover;
+   
+
+}
+/* container */
+.container{
+    width: 100%;
+    position: relative;
+}
+/* nav bar */
+.navbar{
+    display: flex;
+    width: 100%;
+   
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    position: absolute;
+    color: white;
+    
+}
+.logo-nav img{
+    width: 160px;
+    position: absolute;
+    top: -20px;
+}
+/* center part options */
+.center-options{
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    
+    
+}
+.center-options a{
+
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.center-options a:hover{
+    color: red;
+}
+/* icons-section */
+.icons-section{
+    font-size: 25px;
+    cursor: pointer;
+}
+.icons-section:hover{
+    color: red;
+}
+/* squid-logo */
+.squid-logo{
+    position: absolute;
+ width: 60%;
+ display: flex;
+ flex-direction: column;
+
+ justify-content: left;
+ 
+}
+.squid-logo img{
+width: 100%;
+}
+.squid-logo p {
+ color: white;
+ margin-left: 220px;
+ /* margin-bottom: 20px; */
+}
+.btn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.btn button{
+    padding: 18px 38px 18px 38px;
+    border-radius: 20px;
+    font-size: 15px;
+    transform: 0.9s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#active-play i{
+    font-size: 30px;
+}
+#active-play{
+    padding: 10px 30px  10px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #E91E63, #F39C12);
+}
+.btn button:hover{
+    transition: 0.3 all;
+    background: linear-gradient(90deg, #E91E63, #F39C12);
+}
+#active-btn{
+    color: white;
+    background: rgba(0,0,0,0);
+}
+
+#active-btn:hover{
+    background: linear-gradient(90deg, #E91E63, #F39C12);
+}
+/* bottom-card */
+.bottom-card{
+    width: 100%;
+    background-color: #777;
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer-nav{
+    position: absolute;
+    display: flex;
+   background-color: #77777739;
+   width: 80%;
+   top: 800px;
+   height:300px ;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   background-size: cover;
+   gap: 40px;
+   backdrop-filter: blur(50px);
+}
+.footer-nav img{
+    height: 200px;
+    width: 350px;
+    background-size: cover;
+    object-fit: cover;
+    
+    border-radius: 20px;
+    border: 2px solid #777 ;
+}
+.img-1 i{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 110px;
+    left: 300px;
+    font-size: 40px;
+}
+.img-1 i{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 110px;
+    left: 300px;
+    font-size: 40px;
+}
+
+.img-2 i{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 110px;
+    left: 650px;
+    font-size: 40px;
+}
+.img-3 i{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 110px;
+    right: 120px;
+    font-size: 40px;
+}

@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/*main- container  */
+     
+.main-container{
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+.container{
+   
+    width: 90%;
+    
+}
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+
+ul,li{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.left-heading img{
+ margin-bottom: 20px;
+}
+#cart{
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* bottom-border */
+.bottom-border{
+    border-bottom: 2px solid #777;
+}
+/* main-heading */
+.main-heading{
+display: grid;
+grid-template-columns: 1fr 2fr 1fr;
+position: relative;
+
+/* background-color: snow; */
+}
+
+ /* left-heading */
+ .left-heading{
+ /* background-color: #de2117; */
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ 
+ }
+ .left-heading img{
+    margin-top: 100px;
+    width: 40px;
+    
+ }
+/* middel-heading */
+.middel-heading{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    height: 150px;
+}
+
+.right-heading{
+    /* background-color: aquamarine; */
+    
+}
+#rotate{
+    display: inline-block;
+    transform: rotate(360deg);
+}
+/* gallery */
+.grid-gallery {
+  display: grid;
+  /* 5 barabar ke columns */
+  grid-template-columns: repeat(5, 1fr);
+  /* 3 rows - height aap apne hisab se change kar sakte hain (jaise 200px) */
+  grid-template-rows: repeat(3, );
+  /* Har image ke beech ka gap */
+  gap: 20px;
+  padding: 20px;
+  /* background-color: #fff; */
+}
+
+/* Sabhi images ki basic styling */
+.grid-gallery img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover; /* Image ko crop karke square/box me fit karega */
+  border-radius: 24px; /* Image me rounded corners dene ke liye */
+}
+
+/* --- GRID MERGING LOGIC --- */
+
+/* Column 1: Row 1 se 4 tak vertical merge */
+.col-1-full {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  height: 200px;
+  width: 50px;
+   margin-top: 100px; 
+ 
+}
+
+/* Column 2: Top box sirf 1 row lega */
+.col-2-top {
+  grid-column: 2;
+  grid-row: 1;
+  height: 200px;
+   margin-top: 40px; 
+}
+/* Column 2: Bottom box bachi hui 2 rows ko merge karega */
+.col-2-bottom {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  height: 200px;
+}
+
+/* Column 3: Teeno rows merged */
+.col-3-full {
+  grid-column: 3;
+  grid-row: 1 / 4;
+  height: 500px;
+}
+
+/* Column 4: Top box 1.5 ya 2 rows jitna gherega (Image ke layout ke mutabik) */
+.col-4-top {
+  grid-column: 4;
+  grid-row: 1 / 3;
+  height: 200px;
+   margin-top: 40px; 
+}
+.col-4-bottom {
+  grid-column: 4;
+  grid-row: 3;
+  height: 200px;
+   margin-bottom: 40px; 
+}
+
+/* Column 5: Teeno rows merged lekin thoda center me balanced (Jaisa image me hai) */
+.col-5-full {
+  grid-column: 5;
+  grid-row: 1 / 4;
+  width: 50px;
+  height: 200px;
+  /* Image layout ke anusar thoda neeche se start aur khatam ho raha hai */
+  margin-top: 100px; 
+  /* height: calc(220px - 20px); */
+}
+/* bottom-footer */
+.bottom-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-center{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.date{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.date i{
+    width: 120px;
+    height: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    font-size: 30px;
+    
+}
+.right-bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right-bottom h1{
+    font-size: 50px;
+}
+.bottom-center button{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #a9f90a;
+    background-color: #F2EFEA;
+    border: none;
+}

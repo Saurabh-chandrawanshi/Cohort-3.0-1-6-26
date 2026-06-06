@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+
+    background-color: #F7F5F2;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+
+}
+
+/* MAIN CONTAINER */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 70px;
+}
+
+/* NAVBAR */
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Logo */
+
+nav h1 {
+
+    font-size: 60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+/* Nav Links */
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+
+}
+
+/* Navbar Anchor */
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.nav-links a:hover {
+    color: #7B8664;
+}
+
+/* Underline Hover Effect */
+
+.nav-links a::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 2px;
+    background-color: #7B8664;
+    transition: 0.3s;
+}
+
+/* Hover Underline */
+
+.nav-links a:hover::after {
+    width: 100%;
+
+}
+
+/* Active Link */
+
+.active {
+    color: #7B8664;
+}
+
+/* Active Underline */
+
+.active::after {
+    width: 100% !important;
+}
+
+/* Navbar Icons */
+
+.nav-icons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+/* Icons */
+
+.nav-icons i {
+    font-size: 28px;
+    cursor: pointer;
+
+}
+
+
+/* BAG ICON */
+
+
+.bag {
+    position: relative;
+
+}
+
+/* Notification Count */
+
+.count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #7B8664;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* HERO SECTION */
+
+
+.hero {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+
+/* LEFT SIDE */
+
+
+.left {
+    width: 35%;
+}
+
+/* Collection */
+
+.collection {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #7B8664;
+    letter-spacing: 4px;
+}
+
+/* Collection Icon */
+
+.collection i {
+    font-size: 35px;
+
+}
+
+/* Main Heading */
+
+.left h2 {
+    font-size: 110px;
+    line-height: 90px;
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+
+}
+
+/* Small Line */
+
+.line {
+    width: 70px;
+    height: 2px;
+    background-color: #7B8664;
+    margin: 40px 0;
+}
+
+/* Description */
+.desc {
+    width: 80%;
+    line-height: 35px;
+    font-size: 20px;
+    color: #555;
+
+}
+
+
+/* COLORS */
+
+.colors {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+
+}
+
+/* Color Circle */
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Individual Colors */
+
+.green {
+    background-color: #7B8664;
+}
+
+.white {
+    background-color: #E8E2DA;
+}
+
+.pink {
+    background-color: #E7B4B4;
+}
+
+
+/* DETAILS */
+
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Small Line */
+
+.small-line {
+    width: 30px;
+    height: 2px;
+    background-color: #999;
+}
+
+/* Detail Text */
+
+.detail-text {
+    width: 80%;
+    line-height: 35px;
+    margin-top: 20px;
+    color: #555;
+
+}
+
+
+/* FEATURES */
+
+
+.features {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    background-color: white;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+
+}
+
+/* Feature Box */
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Circle Icon Box */
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #EEF0E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feature Icons */
+
+.icon-box i {
+    font-size: 35px;
+    color: #7B8664;
+}
+
+
+/* RIGHT SIDE */
+
+.right {
+    width: 58%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    
+
+}
+
+
+/* IMAGE BOX */
+
+
+.image-box {
+    width: 100%;
+    position: relative;
+}
+
+/* Main Image */
+
+.image-box img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+
+
+
+/* PRICE TAG */
+
+.price {
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: white;
+    padding: 18px 30px;
+    border-radius: 40px;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+
+/* RATING */
+
+
+.rating {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    padding: 18px 30px;
+    border-radius: 40px;
+    display: flex;
+    gap: 15px;
+
+}
+
+/* Stars */
+
+.stars {
+    color: #7B8664;
+}
+
+
+/* VERTICAL TEXT */
+
+
+.vertical-text {
+    position: absolute;
+    left: -250px;
+    top: 300px;
+    transform: rotate(-90deg);
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ADD TO BAG */
+
+
+.add-bag {
+    position: absolute;
+    bottom: 130px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    background-color: #7B8664;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Add Bag Icon */
+
+.add-bag i {
+    font-size: 35px;
+
+}
+
+
+/* SIDE IMAGES */
+
+.side-images {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 25px;
+    margin:30px ;
+}
+
+/* Sidebar Images */
+
+.side-images img {
+    width: 130px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+
+}
+
+/* Active Image */
+
+.side-images img:hover {
+    border: 4px solid #7B8664;
+    transform: 0.3s all;
+
+}
+/* BOTTOM BAR */
+.bottom-bar {
+    /* width: 52%; */
+    /* margin-left: auto; */
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+/* Bottom Box */
+
+.bottom-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    top: 200px;
+
+}
+
+/* Bottom Icons */
+
+.bottom-box i {
+    font-size: 40px;
+    color: #7B8664;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1200px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .bottom-bar {
+        width: 100%;
+    }
+    
+   
+@media(max-width:1200px) {
+     .side-images img {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 25px;
+    margin:30px ;
+}
+}
+}
