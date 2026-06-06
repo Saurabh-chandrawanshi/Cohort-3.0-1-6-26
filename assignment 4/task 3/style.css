@@ -1,63 +1,91 @@
-.grid-gallery {
-  display: grid;
-  /* 5 barabar ke columns */
-  grid-template-columns: repeat(5, 1fr);
-  /* 3 rows - height aap apne hisab se change kar sakte hain (jaise 200px) */
-  grid-template-rows: repeat(3, 220px);
-  /* Har image ke beech ka gap */
-  gap: 20px;
-  padding: 20px;
-  background-color: #fff;
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Sabhi images ki basic styling */
-.grid-gallery img {
+html,body{
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Image ko crop karke square/box me fit karega */
-  border-radius: 24px; /* Image me rounded corners dene ke liye */
 }
+.main-container{
 
-/* --- GRID MERGING LOGIC --- */
+background-color: aqua;
+width: 100%;
+min-height: 100vh; 
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px;
+}
+.container{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 0.9fr;
+  gap: 20px;
+  border-radius: 30px;
+  width: 950px;
+  padding: 18px;
+  grid-template-rows: 170px 210px 120px 160px;
+  grid-template-areas: 
+  "intro intro phone tablet"
+  "profile stack laptop laptop"
+  "learning learning laptop laptop"
+  "learning learning framer work";
+}
+.card{
+  background-color: aquamarine;
+  color: white;
+  border-radius: 18px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid #252525;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-/* Column 1: Row 1 se 4 tak vertical merge */
-.col-1-full {
-  grid-column: 1;
-  grid-row: 1 / 4;
 }
-
-/* Column 2: Top box sirf 1 row lega */
-.col-2-top {
-  grid-column: 2;
-  grid-row: 1;
+.card-1{
+  grid-area: intro;
 }
-/* Column 2: Bottom box bachi hui 2 rows ko merge karega */
-.col-2-bottom {
-  grid-column: 2;
-  grid-row: 2 / 4;
+.card-2{
+  grid-area: phone;
+  padding: 0;
 }
-
-/* Column 3: Teeno rows merged */
-.col-3-full {
-  grid-column: 3;
-  grid-row: 1 / 4;
+.card-3{
+  grid-area: tablet;
+  padding: 0;
 }
-
-/* Column 4: Top box 1.5 ya 2 rows jitna gherega (Image ke layout ke mutabik) */
-.col-4-top {
-  grid-column: 4;
-  grid-row: 1 / 3;
+.card-4{
+  grid-area: social;
+  display: none;
+  
 }
-.col-4-bottom {
-  grid-column: 4;
-  grid-row: 3;
+.card-5{
+  grid-area: profile;
+  padding: 0;
 }
-
-/* Column 5: Teeno rows merged lekin thoda center me balanced (Jaisa image me hai) */
-.col-5-full {
-  grid-column: 5;
-  grid-row: 1 / 4;
-  /* Image layout ke anusar thoda neeche se start aur khatam ho raha hai */
-  margin-top: 40px; 
-  height: calc(100% - 40px);
+.card-6{
+  grid-area: stack;
+}
+.card-7{
+  grid-area: laptop;
+  padding: 0;
+}
+.card-8{
+  grid-area: resource;
+  display: none;
+}
+.card-9{
+  grid-area: learning;
+}
+.card-10{
+  grid-area: framer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-11{
+  grid-area: work;
 }
