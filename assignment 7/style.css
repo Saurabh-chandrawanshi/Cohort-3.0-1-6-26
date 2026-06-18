@@ -1,12 +1,11 @@
-/* =========================
-   GOOGLE FONT
-========================= */
+
+   /* GOOGLE FON */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* =========================
-   ROOT VARIABLES
-========================= */
+
+   /* ROOT VARIABLES */
+
 
 :root{
 
@@ -30,9 +29,9 @@
 
 }
 
-/* =========================
+/*
    RESET
-========================= */
+ */
 
 *{
 margin:0;
@@ -73,9 +72,9 @@ width:min(100% - 40px,var(--container));
 margin:auto;
 }
 
-/* =========================
+/* 
    ANNOUNCEMENT BAR
-========================= */
+ */
 
 .announcement-bar{
 height:34px;
@@ -94,9 +93,9 @@ width:100%;
 z-index:1000;
 }
 
-/* =========================
+/* 
    NAVBAR
-========================= */
+ */
 
 .navbar-wrapper{
 position:sticky;
@@ -135,9 +134,9 @@ box-shadow:var(--shadow);
 background:#fff;
 }
 
-/* =========================
+/* 
    NAV LINKS
-========================= */
+ */
 
 .nav-left,
 .nav-right{
@@ -162,9 +161,9 @@ position:relative;
 opacity:.7;
 }
 
-/* =========================
+/*
    LOGO
-========================= */
+ */
 
 .logo{
 
@@ -208,9 +207,9 @@ font-size:1.35rem;
 font-size:.75rem;
 }
 
-/* =========================
+/* 
    CART
-========================= */
+ */
 
 .cart{
 
@@ -241,9 +240,9 @@ font-weight:700;
 
 }
 
-/* =========================
+/* 
    DROPDOWN
-========================= */
+ */
 
 .learn-dropdown{
 position:relative;
@@ -343,18 +342,18 @@ padding:24px;
 margin-bottom:10px;
 }
 
-/* =========================
+/* 
    MOBILE
-========================= */
+*/
 
 .mobile-toggle{
 display:none;
 font-size:1.5rem;
 }
 
-/* =========================
+/*
    BADGES
-========================= */
+ */
 
 .badge{
 
@@ -388,9 +387,9 @@ background:var(--orange);
 background:var(--blue);
 }
 
-/* =========================
+/* 
    HERO
-========================= */
+ */
 
 .hero{
 padding:140px 0 100px;
@@ -451,9 +450,9 @@ transform:translateY(-3px);
 
 }
 
-/* =========================
+/* 
    HERO IMAGE
-========================= */
+ */
 
 .hero-image{
 
@@ -491,9 +490,9 @@ filter:drop-shadow(0 20px 30px rgba(0,0,0,.15));
 
 }
 
-/* =========================
+/*
    DISCOVER
-========================= */
+*/
 
 .discover{
 
@@ -569,9 +568,9 @@ transform:translateY(-2px);
 background:var(--blue);
 }
 
-/* =========================
+/* 
    FAVORITES
-========================= */
+ */
 
 .favorites{
 padding:100px 0;
