@@ -1,67 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Morphing Sticky Navbar</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Two Leaves & A Bud</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
 </head>
+
 <body>
 
-    <div class="top-announcement-header">
-        FREE US SHIPPING FOR ORDERS OVER $75
-    </div>
+<!-- Announcement -->
 
-    <nav class="adaptive-navbar" id="dynamicNavbar">
-        
-        <div class="nav-segment left-segment">
-             <a href="#" class="nav-anchor has-dropdown">Shop</a>
-            <a href="#" class="nav-anchor has-dropdown">LEARN</a>
-            <a href="#" class="nav-anchor">REVIEWS ★★★★★</a>
-        </div>
+<div class="announcement-bar">
+    FREE US SHIPPING FOR ORDERS OVER $75
+</div>
 
-        <div class="nav-segment center-segment">
-            <div class="brand-typography-wrapper">
-                <span class="brand-text-row1">two leaves</span>
-                <span class="brand-text-row2">and a bud</span>
-            </div>
-        </div>
+<!-- Navbar -->
 
-        <div class="nav-segment right-segment">
-            <a href="#" class="nav-anchor">MY ACCOUNT</a>
-            <a href="#" class="nav-anchor">CAFE & WHOLESALE</a>
-            <a href="#" class="nav-anchor">TEA JOURNAL</a>
-            
-            <div class="cart-icon-container">
-                <i class="ri-shopping-bag-3-line dynamic-cart-icon"></i>
-                <span class="cart-badge-counter">0</span>
-            </div>
-        </div>
+<header class="navbar-wrapper">
 
-        <button class="mobile-hamburger-trigger" id="mobileMenuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+<nav class="navbar" id="navbar">
 
-    <div class="mobile-overlay-menu" id="mobileMenuDrawer">
-         <a href="#">Shop</a>
-        <a href="#">LEARN</a>
-        <a href="#">REVIEWS ★★★★★</a>
-        <a href="#">MY ACCOUNT</a>
-        <a href="#">CAFE & WHOLESALE</a>
-        <a href="#">TEA JOURNAL</a>
-    </div>
+<div class="nav-left">
 
-    <main class="page-body-content">
-        <div class="visual-guide-box">
-            <h2>Scroll down down to experience the Navbar morphing!</h2>
-            <p>Jab aap top par honge to margin aur rounded corners dikhenge. Scroll karte hi ye pure top screen par fix aur full-width ho jayega.</p>
-        </div>
-    </main>
+<div class="learn-dropdown">
 
-    <script src="script.js"></script>
+<button class="nav-link learn-btn">
+LEARN
+<i class="ri-arrow-down-s-line"></i>
+</button>
+
+<div class="mega-menu">
+
+<div class="mega-column">
+<h4>Tea Education</h4>
+<a href="#">Matcha Guide</a>
+<a href="#">Brewing Methods</a>
+<a href="#">Tea Origins</a>
+<a href="#">Tea Types</a>
+</div>
+
+<div class="mega-column">
+<h4>Collections</h4>
+<a href="#">Green Tea</a>
+<a href="#">Black Tea</a>
+<a href="#">Herbal Tea</a>
+<a href="#">Latte Mixes</a>
+</div>
+
+<div class="mega-card">
+<h3>Tea Journal</h3>
+<p>
+Discover brewing techniques,
+tea culture and wellness tips.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<a href="#" class="nav-link">
+REVIEWS ★★★★★
+</a>
+
+</div>
+
+<!-- Logo -->
+
+<div class="logo" id="logo">
+
+<div class="logo-top">
+two leaves
+</div>
+
+<div class="logo-bottom">
+and a bud
+</div>
+
+</div>
+
+<!-- Right -->
+
+<div class="nav-right">
+
+<a href="#" class="nav-link">
+MY ACCOUNT
+</a>
+
+<a href="#" class="nav-link">
+CAFE & WHOLESALE
+</a>
+
+<a href="#" class="nav-link">
+PARTNERS
+</a>
+
+<a href="#" class="nav-link">
+TEA JOURNAL
+</a>
+
+<div class="cart">
+
+<i class="ri-shopping-bag-line"></i>
+
+<span class="cart-count">
+3
+</span>
+
+</div>
+
+</div>
+
+<button class="mobile-toggle">
+<i class="ri-menu-line"></i>
+</button>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-content">
+
+<span class="badge purple">
+BEST SELLERS
+</span>
+
+<h1>
+Meet Your Matcha
+</h1>
+
+<p>
+Premium organic matcha crafted
+for modern rituals. Smooth,
+vibrant and sourced directly
+from exceptional tea gardens.
+</p>
+
+<a href="#" class="btn-primary">
+Shop Now
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="matcha-circle"></div>
+
+<img
+src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?q=80&w=900"
+alt="Matcha"
+>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DISCOVER -->
+
+<section class="discover">
+
+<div class="container">
+
+<span class="badge orange">
+DISCOVER
+</span>
+
+<h2>
+Let's find a cup that fits the
+moment. What are you searching for?
+</h2>
+
+<div class="search-wrapper">
+
+<input
+type="text"
+placeholder="Search tea, flavors, moods..."
+>
+
+</div>
+
+<div class="tags">
+
+<button class="tag">
+A Sweet Treat
+</button>
+
+<button class="tag">
+Evening Unwind
+</button>
+
+<button class="tag">
+Caffeine!
+</button>
+
+<button class="tag">
+Whole Leaf
+</button>
+
+<button class="tag">
+Green Tea
+</button>
+
+<button class="tag">
+Latte Mix
+</button>
+
+<button class="tag">
+Organic
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAVORITES -->
+
+<section class="favorites">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>Customer Favorites</h2>
+
+</div>
+
+<div class="product-grid">
+
+<!-- Card 1 -->
+
+<div class="product-card">
+
+<span class="product-badge">
+LATTE MIX ★ 4.71
+</span>
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=900"
+alt=""
+>
+
+</div>
+
+<h3>Matcha Latte</h3>
+
+<p>$12.95</p>
+
+<button class="add-btn">
++ Add
+</button>
+
+</div>
+
+<!-- Card 2 -->
+
+<div class="product-card">
+
+<span class="product-badge">
+GREEN TEA ★ 4.90
+</span>
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=900"
+alt=""
+>
+
+</div>
+
+<h3>Sencha Green</h3>
+
+<p>$10.95</p>
+
+<button class="add-btn">
++ Add
+</button>
+
+</div>
+
+<!-- Card 3 -->
+
+<div class="product-card">
+
+<span class="product-badge">
+HERBAL ★ 4.80
+</span>
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=900"
+alt=""
+>
+
+</div>
+
+<h3>Chamomile Calm</h3>
+
+<p>$9.95</p>
+
+<button class="add-btn">
++ Add
+</button>
+
+</div>
+
+<!-- Card 4 -->
+
+<div class="product-card">
+
+<span class="product-badge">
+BLACK TEA ★ 4.89
+</span>
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?q=80&w=900"
+alt=""
+>
+
+</div>
+
+<h3>Earl Grey</h3>
+
+<p>$11.95</p>
+
+<button class="add-btn">
++ Add
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONFIGURATOR -->
+
+<section class="configurator">
+
+<div class="container config-grid">
+
+<!-- Left -->
+
+<div class="config-image">
+
+<div class="display-frame">
+
+<img
+src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=900"
+alt=""
+>
+
+</div>
+
+<div class="dots">
+
+<span class="active"></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+<!-- Right -->
+
+<div class="config-content">
+
+<span class="badge blue">
+HERBAL TEA
+</span>
+
+<h2>
+Alpine Berry
+</h2>
+
+<div class="rating">
+★★★★★ 4.9
+</div>
+
+<div class="variants">
+
+<button class="variant active">
+15 Bags
+</button>
+
+<button class="variant">
+30 Bags
+</button>
+
+<button class="variant">
+60 Bags
+</button>
+
+</div>
+
+<div class="subscription">
+
+<div
+class="sub-card active-sub"
+data-price="8.95"
+>
+
+<h4>One Time Purchase</h4>
+
+<p>$8.95</p>
+
+</div>
+
+<div
+class="sub-card"
+data-price="8.06"
+>
+
+<h4>
+Subscribe & Save 10%
+</h4>
+
+<p>$8.06</p>
+
+</div>
+
+</div>
+
+<div class="cart-ui">
+
+<div class="qty-box">
+
+<button id="minus">
+-
+</button>
+
+<input
+type="text"
+value="1"
+id="qty"
+readonly
+>
+
+<button id="plus">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+id="cartBtn"
+>
+
+Add To Cart — $8.95
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="journal">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="badge purple">
+TEA JOURNAL
+</span>
+
+<h2>
+Stories, Rituals & Brewing Wisdom
+</h2>
+
+</div>
+
+<div class="journal-grid">
+
+<div class="journal-card">
+
+<img src="journal-1.jpg" alt="">
+
+<div class="journal-content">
+
+<span>GUIDE</span>
+
+<h3>
+How To Brew The Perfect Matcha
+</h3>
+
+<a href="#">
+Read Article →
+</a>
+
+</div>
+
+</div>
+
+<div class="journal-card">
+
+<img src="journal-2.jpg" alt="">
+
+<div class="journal-content">
+
+<span>WELLNESS</span>
+
+<h3>
+Tea Rituals For Better Mornings
+</h3>
+
+<a href="#">
+Read Article →
+</a>
+
+</div>
+
+</div>
+
+<div class="journal-card">
+
+<img src="journal-3.jpg" alt="">
+
+<div class="journal-content">
+
+<span>CULTURE</span>
+
+<h3>
+The Story Behind Whole Leaf Tea
+</h3>
+
+<a href="#">
+Read Article →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="testimonials">
+
+<div class="container">
+
+<span class="badge orange">
+REVIEWS
+</span>
+
+<h2>
+Loved By Tea Drinkers Everywhere
+</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The freshest tea I've ever tasted.
+Beautiful packaging and incredible flavor."
+</p>
+
+<h4>
+— Sarah W.
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Matcha quality is unbelievable.
+Completely changed my morning routine."
+</p>
+
+<h4>
+— Daniel M.
+</h4>
+
+</div>
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Luxury experience from start to finish."
+</p>
+
+<h4>
+— Emily R.
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="brand-story">
+
+<div class="container">
+
+<div class="story-grid">
+
+<div>
+
+<span class="badge blue">
+OUR STORY
+</span>
+
+<h2>
+Crafted From The Finest Tea Gardens
+</h2>
+
+</div>
+
+<div>
+
+<p>
+
+For over two decades,
+we've partnered with farmers
+who share our belief that tea
+should be honest, sustainable,
+and exceptionally delicious.
+
+Every leaf is selected with care,
+bringing centuries of craftsmanship
+into every cup.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="newsletter">
+
+<div class="container">
+
+<div class="newsletter-box">
+
+<span class="badge purple">
+STAY CONNECTED
+</span>
+
+<h2>
+Join The Tea Club
+</h2>
+
+<p>
+Get brewing tips, new releases,
+exclusive offers and tea stories.
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+<footer class="footer">
+
+<div class="footer-mountains">
+
+<svg
+viewBox="0 0 1440 250"
+preserveAspectRatio="none">
+
+<path
+fill="#C7D8F5"
+d="M0,200
+L180,80
+L320,180
+L480,60
+L650,190
+L820,70
+L980,170
+L1180,50
+L1440,180
+L1440,250
+L0,250Z">
+</path>
+
+</svg>
+
+</div>
+
+<div class="footer-content">
+
+<h2>
+two leaves
+</h2>
+
+<p>
+and a bud
+</p>
+
+<ul>
+
+<li>Shop</li>
+<li>Learn</li>
+<li>Journal</li>
+<li>Wholesale</li>
+
+</ul>
+
+<span>
+© 2026 Two Leaves & A Bud
+</span>
+
+</div>
+
+</footer>
+<button class="theme-toggle">
+
+<i class="ri-moon-line"></i>
+
+</button>
+<div class="loader">
+
+<div class="loader-logo">
+
+two leaves
+
+<span>
+and a bud
+</span>
+
+</div>
+
+</div>
+<div class="stats">
+
+<div class="stat">
+<h3 data-target="50000">0</h3>
+<p>Cups Served</p>
+</div>
+
+<div class="stat">
+<h3 data-target="250">0</h3>
+<p>Tea Blends</p>
+</div>
+
+<div class="stat">
+<h3 data-target="99">0</h3>
+<p>Customer Rating</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
