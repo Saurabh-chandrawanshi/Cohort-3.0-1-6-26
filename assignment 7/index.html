@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Morphing Sticky Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-announcement-header">
+        FREE US SHIPPING FOR ORDERS OVER $75
+    </div>
+
+    <nav class="adaptive-navbar" id="dynamicNavbar">
+        
+        <div class="nav-segment left-segment">
+             <a href="#" class="nav-anchor has-dropdown">Shop</a>
+            <a href="#" class="nav-anchor has-dropdown">LEARN</a>
+            <a href="#" class="nav-anchor">REVIEWS ★★★★★</a>
+        </div>
+
+        <div class="nav-segment center-segment">
+            <div class="brand-typography-wrapper">
+                <span class="brand-text-row1">two leaves</span>
+                <span class="brand-text-row2">and a bud</span>
+            </div>
+        </div>
+
+        <div class="nav-segment right-segment">
+            <a href="#" class="nav-anchor">MY ACCOUNT</a>
+            <a href="#" class="nav-anchor">CAFE & WHOLESALE</a>
+            <a href="#" class="nav-anchor">TEA JOURNAL</a>
+            
+            <div class="cart-icon-container">
+                <i class="ri-shopping-bag-3-line dynamic-cart-icon"></i>
+                <span class="cart-badge-counter">0</span>
+            </div>
+        </div>
+
+        <button class="mobile-hamburger-trigger" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-overlay-menu" id="mobileMenuDrawer">
+         <a href="#">Shop</a>
+        <a href="#">LEARN</a>
+        <a href="#">REVIEWS ★★★★★</a>
+        <a href="#">MY ACCOUNT</a>
+        <a href="#">CAFE & WHOLESALE</a>
+        <a href="#">TEA JOURNAL</a>
+    </div>
+
+    <main class="page-body-content">
+        <div class="visual-guide-box">
+            <h2>Scroll down down to experience the Navbar morphing!</h2>
+            <p>Jab aap top par honge to margin aur rounded corners dikhenge. Scroll karte hi ye pure top screen par fix aur full-width ho jayega.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
