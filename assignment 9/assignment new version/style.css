@@ -1,0 +1,236 @@
+/* Core Styling & Theme CSS Variables */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+    --primary-color: #3b82f6;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --accent-bg: #2a2a2a;
+}
+
+/* Light Theme overrides when data-theme="light" is injected */
+[data-theme="light"] {
+    --bg-color: #f3f4f6;
+    --text-color: #1f2937;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --primary-color: #2563eb;
+    --success-color: #059669;
+    --danger-color: #dc2626;
+    --warning-color: #d97706;
+    --accent-bg: #f9fafb;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.5;
+}
+
+header {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.meta-tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.due-date { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; }
+.cohort { background-color: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.points { background-color: rgba(16, 185, 129, 0.15); color: #10b981; }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instruction {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--accent-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.9; }
+.theme-btn { background-color: var(--primary-color); color: white; }
+.btn-success { background-color: var(--success-color); color: white; }
+.btn-danger { background-color: var(--danger-color); color: white; }
+.btn-warning { background-color: var(--warning-color); color: white; }
+
+/* Dynamic Task Cards Styling */
+.task-card {
+    background-color: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    border-left: 6px solid var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.task-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+}
+
+.task-metadata {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+/* Status Data Attribute Changes */
+.task-card[data-status="completed"] {
+    border-left-color: var(--success-color);
+    opacity: 0.5;
+}
+.task-card[data-status="completed"] .task-info h4 {
+    text-decoration: line-through;
+}
+
+/* Event Propagation Boxes */
+.prop-box {
+    padding: 20px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+.gp-box { background-color: rgba(59, 130, 246, 0.05); }
+.p-box { background-color: rgba(245, 158, 11, 0.05); }
+.child-btn { background-color: var(--text-color); color: var(--bg-color); }
+
+/* Browser Pipeline Layout Diagram */
+.pipeline-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pipeline-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.pipeline-card {
+    background-color: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pipeline-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+
+.pipeline-card p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.pipeline-connector {
+    font-size: 1.5rem;
+}
+
+.render-tree-card {
+    border: 2px solid var(--success-color);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.render-tree-card h3 {
+    color: var(--success-color);
+}

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer: Interactive Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DOM Explorer: Task Manager</h1>
+        <!-- Module 4: Theme Toggle -->
+        <button id="theme-toggle-btn" class="btn">Toggle Theme</button>
+    </header>
+
+    <main class="container">
+        
+        <!-- Module 1: Task Creation Form -->
+        <section class="card-section">
+            <h2>1. Create a New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title:</label>
+                    <input type="text" id="task-title" placeholder="Enter task description..." required value="">
+                </div>
+                <div class="form-group">
+                    <label for="task-category">Category:</label>
+                    <select id="task-category">
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+                </div>
+                <button type="submit" id="add-task-btn" class="btn btn-success">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Module 5 & 6: Task List Container (Uses Event Delegation) -->
+        <section class="card-section">
+            <h2>Task List</h2>
+            <div id="task-list-container">
+                <!-- Dynamic Task Cards will be appended here -->
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Module 7: Event Propagation Demonstration -->
+        <section class="card-section propagation-demo">
+            <h2>2. Event Propagation Demo (Check Console)</h2>
+            <p>Click the Child button to see Bubbling vs Capturing paths logged in the Developer Tools Console.</p>
+            <div id="grandparent" class="prop-box">
+                Grandparent
+                <div id="parent" class="prop-box">
+                    Parent
+                    <button id="child-btn" class="btn">Child Button</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Module 8: Browser Rendering Pipeline Section -->
+        <section class="card-section">
+            <h2>3. Browser Rendering Pipeline Visualizer</h2>
+            <div class="pipeline-flow">
+                <div class="pipeline-card html-branch">
+                    <h3>HTML Stream</h3>
+                    <div class="arrow">↓</div>
+                    <p><strong>Parsing:</strong> Browser reads raw bytes.</p>
+                    <div class="arrow">↓</div>
+                    <p><strong>Tokenization:</strong> Converts characters to tokens.</p>
+                    <div class="arrow">↓</div>
+                    <p><strong>DOM Tree:</strong> Node structure built in memory.</p>
+                </div>
+
+                <div class="pipeline-connector">+</div>
+
+                <div class="pipeline-card css-branch">
+                    <h3>CSS Style Sheets</h3>
+                    <div class="arrow">↓</div>
+                    <p><strong>CSSOM Tree:</strong> Style rules mapped to selectors.</p>
+                </div>
+
+                <div class="pipeline-connector">=</div>
+
+                <div class="pipeline-card render-tree-card">
+                    <h3>Render Tree</h3>
+                    <p>Combines DOM and CSSOM to map out exactly what is visibly painted on screen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Color Palette Variables for Light & Dark Themes */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: #dddddd;
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f4f7f6;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+    --primary-color: #375a7f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-success { background-color: var(--success-color); color: white; }
+.btn-danger { background-color: var(--danger-color); color: white; }
+.btn-warning { background-color: var(--warning-color); color: black; }
+
+/* Task Card Style */
+.task-card {
+    border-left: 5px solid var(--primary-color);
+    padding: 15px;
+    margin: 10px 0;
+    background: var(--bg-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card[data-status="completed"] {
+    text-decoration: line-through;
+    opacity: 0.6;
+    border-left-color: var(--success-color);
+}
+
+.task-actions button {
+    margin-left: 5px;
+}
+
+/* Propagation Demo Boxes */
+.prop-box {
+    padding: 20px;
+    border: 2px dashed #888;
+    margin: 10px 0;
+    background: rgba(0,0,0,0.02);
+}
+
+/* Visual Pipeline Diagram Styling */
+.pipeline-flow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pipeline-card {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    width: 220px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.arrow {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.pipeline-connector {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.render-tree-card {
+    background-color: var(--success-color);
+    color: white;
+}

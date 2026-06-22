@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer - Interactive Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-container">
+            <h1>DOM Explorer: <span class="sub-text">Interactive Task Manager</span></h1>
+            <div class="assignment-meta">
+                <span class="badge cohort">Cohort 3.0</span>
+                <span class="badge total-points">Points: 20</span>
+                <button id="theme-toggle-btn" class="btn-theme">Toggle Theme 🌗</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        
+        <section class="control-panel">
+            <h2>1. Task Creation Module</h2>
+            <form id="task-form" autocomplete="off">
+                <div class="form-field">
+                    <label for="task-title">Task Title Input</label>
+                    <input type="text" id="task-title" placeholder="Enter what needs to be done..." required value="">
+                </div>
+                
+                <div class="form-field">
+                    <label for="task-category">Category Dropdown</label>
+                    <select id="task-category">
+                        <option value="Work">💼 Work</option>
+                        <option value="Personal">🏡 Personal</option>
+                        <option value="Urgent">🔥 Urgent</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="add-task-btn" class="btn btn-primary">Add Task Button</button>
+            </form>
+        </section>
+
+        <section class="board-panel">
+            <h2>Task Board & Display Grid</h2>
+            <p class="section-desc">Managed using a single event listener on the parent container (Event Delegation).</p>
+            
+            <div id="task-list-container">
+                </div>
+        </section>
+
+        <section class="propagation-panel">
+            <h2>2. Event Propagation Demonstration</h2>
+            <p class="section-desc">Click the <strong>Child Button</strong> below and check your browser's Developer Console (F12) to trace the simultaneous phases.</p>
+            
+            <div id="grandparent" class="bubble-box gp">
+                <span class="box-label">Grandparent Container</span>
+                <div id="parent" class="bubble-box p">
+                    <span class="box-label">Parent Container</span>
+                    <button id="child-btn" class="btn btn-child">Child Button</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pipeline-panel">
+            <h2>3. Browser Rendering Pipeline Visualizer</h2>
+            <p class="section-desc">Graphical map showing how browsers translate raw documents into live pixels.</p>
+            
+            <div class="pipeline-flow-container">
+                <div class="pipeline-column network-html">
+                    <div class="step-card header-step">HTML Document</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="step-card process-step">Byte Parsing</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="step-card process-step">Tokenization</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="step-card model-step">DOM Tree Built</div>
+                </div>
+
+                <div class="pipeline-operator">➕</div>
+
+                <div class="pipeline-column network-css">
+                    <div class="step-card header-step">CSS Style sheets</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="step-card model-step">CSSOM Tree Built</div>
+                </div>
+
+                <div class="pipeline-operator">➡</div>
+
+                <div class="pipeline-column pipeline-output">
+                    <div class="step-card final-step">Render Tree Assembly</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="step-card output-step">Layout & Paint Visible Viewport</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

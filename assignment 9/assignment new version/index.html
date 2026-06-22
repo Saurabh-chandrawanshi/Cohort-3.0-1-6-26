@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer: Interactive Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>DOM Explorer: Build an Interactive Task Manager</h1>
+            <div class="meta-tags">
+                <span class="tag due-date">Due: Jul 10, 2026, 10:00 AM IST</span>
+                <span class="tag cohort">Cohort 3.0</span>
+                <span class="tag points">Total: 20 pts</span>
+            </div>
+        </div>
+        <button id="theme-toggle-btn" class="btn theme-btn">Switch Theme</button>
+    </header>
+
+    <main class="container">
+        
+        <section class="card-section">
+            <h2><span class="icon">1️⃣</span> Task Creation Module</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title Input:</label>
+                    <input type="text" id="task-title" placeholder="What needs to be done?" required value="">
+                </div>
+                <div class="form-group">
+                    <label for="task-category">Category Dropdown:</label>
+                    <select id="task-category">
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+                </div>
+                <button type="submit" id="add-task-btn" class="btn btn-success">Add Task Button</button>
+            </form>
+        </section>
+
+        <section class="card-section">
+            <h2><span class="icon">📋</span> Task Board</h2>
+            <div id="task-list-container">
+                </div>
+        </section>
+
+        <section class="card-section propagation-demo">
+            <h2><span class="icon">7️⃣</span> Event Propagation Demonstration</h2>
+            <p class="instruction">Click the <strong>Child Button</strong> below and open your browser's Developer Tools Console (F12) to see the execution order for <strong>Bubbling</strong> and <strong>Capturing</strong>.</p>
+            
+            <div id="grandparent" class="prop-box gp-box">
+                <strong>Grandparent Container</strong>
+                <div id="parent" class="prop-box p-box">
+                    <strong>Parent Container</strong>
+                    <br>
+                    <button id="child-btn" class="btn child-btn">Child Button</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2><span class="icon">8️⃣</span> Browser Rendering Pipeline Section</h2>
+            <p class="instruction">Visual flow diagram explaining how a browser converts HTML and CSS into a live Render Tree.</p>
+            
+            <div class="pipeline-flow">
+                <div class="pipeline-branch">
+                    <div class="pipeline-card html-card">
+                        <h3>HTML</h3>
+                        <p>Raw source code byte stream.</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="pipeline-card parsing-card">
+                        <h3>Parsing</h3>
+                        <p>Browser engine processes code.</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="pipeline-card token-card">
+                        <h3>Tokenization</h3>
+                        <p>Strings converted into distinct tokens.</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="pipeline-card tree-card">
+                        <h3>DOM Tree</h3>
+                        <p>Object model structure in memory.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-connector">➕</div>
+
+                <div class="pipeline-branch">
+                    <div class="pipeline-card css-card">
+                        <h3>CSS</h3>
+                        <p>Style sheets and embedded rules.</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="pipeline-card tree-card">
+                        <h3>CSSOM Tree</h3>
+                        <p>Style Object Model for styles.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-connector">➡</div>
+
+                <div class="pipeline-branch final-branch">
+                    <div class="pipeline-card render-tree-card">
+                        <h3>Render Tree</h3>
+                        <p>Combines DOM + CSSOM to calculate layout and paint visible elements instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
