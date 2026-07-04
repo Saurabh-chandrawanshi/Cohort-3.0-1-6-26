@@ -1,0 +1,361 @@
+:root{
+
+/* Background */
+
+--background:#F8F9FB;
+--card:#FFFFFF;
+
+/* Border */
+
+--border:#E5E7EB;
+--input-border:#D1D5DB;
+
+/* Text */
+
+--heading:#111827;
+--body:#4B5563;
+--muted:#6B7280;
+
+/* Blue */
+
+--blue:#2563EB;
+--blue-light:#DBEAFE;
+
+/* Green */
+
+--green:#166534;
+--green-icon:#15803D;
+--green-light:#DCFCE7;
+
+/* Red */
+
+--red:#B91C1C;
+--red-light:#FEE2E2;
+
+/* Danger */
+
+--danger-bg:#FEF2F2;
+--danger-border:#FECACA;
+
+/* Black */
+
+--black:#000000;
+--black-hover:#1F2937;
+
+/* White */
+
+--white:#FFFFFF;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+}
+
+/* puri window ke liye */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* pehla div jiske ander sab hai */
+.main-container {
+    width: 100%;
+    height: 100%;
+    background: #F8F9FB;
+    display: flex;
+    /* align-items: center; */
+}
+
+/* left me jo side bar hai uske liye */
+.right-navbar {
+    background: #FFFFFF;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid #E5E7EB;
+    /* margin: 20px; */
+}
+
+.logo-nav img {
+    width: 230px;
+    height: 190px;
+    display: flex;
+    top: -0%;
+}
+.logo-fix{
+    margin-top: -50px;
+}
+/* left me jo side bar hai uske conetent ke liye */
+.left-top-navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px;
+}
+
+/* Dasbord Ke Option Ke Liye  */
+.dashboard {
+    background: #DBEAFE;
+    border-radius: 20px;
+    color: #1D4ED8;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dashboard:hover {
+    transition: all ease 0.3s;
+    background: #F3F4F6;
+    color: #4B5563;
+}
+
+/* Setting Ke Icon Ke Liye */
+.settig-icon {
+    background-color: #777777b0;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.settig-icon:hover {
+    transition: all ease 0.3s;
+    background-color: rgba(20, 20, 220, 0.608);
+}
+
+/* Add Transition Wale Option Ke Liye */
+.bootom-left-content {
+    margin-bottom: 30px;
+}
+
+.bootom-left-content button {
+    padding: 10px 50px 10px 50px;
+   background:#000000;
+    border: 1px solid #D1D5DB;
+  color:#FFFFFF;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.bootom-left-content button:hover {
+    transition: all ease 0.3s;
+   background:#1F2937;
+    cursor: pointer;
+}
+
+/* Right me jo sara content hai uske liye */
+.left-navbar {
+    background-color: aliceblue;
+    width: 80%;
+    height: 100%;
+
+}
+
+/* Right Top Par Jo NavBar Hai Uske Liye */
+.top-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    gap: 20px;
+    font-weight: 600;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* logout Wale Button Ke LIye */
+.top-nav button {
+    font-weight: 600;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+   background:#FFFFFF;
+border:1px solid #D1D5DB;
+color:#111827;
+
+}
+
+/* Finacil Overview wale pure section ke liye Ke Liye */
+.down-nav {
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+/* 4 card jinme $count ho rahe hai uske liye */
+.top-content {
+    /* background-color: aqua; */
+    height: 100%;
+}
+
+/* finansiacl overview ke liye*/
+.top-heading {
+    /* background-color: brown; */
+    width: 100%;
+    height: 40%;
+
+}
+
+.top-heading h3 {
+    font-size: 30px;
+    color: #111827;
+    /* font-size:52px; */
+    font-weight: 800;
+}
+
+.top-heading p {
+    color: #6B7280;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* diye gay 4 cards ke liye */
+.bottom-box {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: end; */
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    height: 60%;
+    /* gap: 20px; */
+}
+
+.bottom-box h3 {
+    color: #777;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.bottom-box h1 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Sabhi Card Ko Ek Sath Manupulate Karne Ke liye */
+.flex-box {
+    padding: 20px;
+    display: flex;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    /* height: 0px; */
+    border: 1px solid #E5E7EB;
+    margin: 5px;
+    background: #FFFFFF;
+    gap: 10px;
+}
+
+/* Card Ke Logo ke liye sabhi ek sath */
+.logo {
+    background: #DBEAFE;
+    color: #1D4ED8;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h3 {
+    color: #6B7280;
+}
+
+.logo h1 {
+    color: #111827;
+}
+
+/* Cash Flow Analysis wale dono card ke liye jo center Me Hai  */
+.center-content {
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 10px;
+}
+
+/* Cash Flow Analysis wale Card Ke Liye */
+.left-content {
+    width: 70%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #E5E7EB;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Preferences wale Card Ke Liye */
+.right-content {
+    width: 30%;
+    height: 200px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    /* justify-content: space-between; */
+}
+
+/* Dark Mode Ke liye  */
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #777;
+    padding: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* .border-radius-{
+    border-bottom: 1px solid #777;
+} */
+/* Reset All Date Wale Button Ke LIye */
+.reset-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.reset-button button {
+    width: 100%;
+    border: 1px solid #FECACA;
+    padding: 3px 10px 3px 10px;
+    color: #B91C1C;
+    border-radius: 5px;
+    background: #FEF2F2;
+}
+
+/* All Transition Wale Button Ke liye */
+.bottom-content {
+    height: 50%;
+    /* background-color: aqua; */
+}
+
+.bottom-footer-content {
+     background: #FFFFFF;
+    width: 69.5%;
+    height: 100px;
+    border-radius: 20px;
+    margin: 5px;
+}
