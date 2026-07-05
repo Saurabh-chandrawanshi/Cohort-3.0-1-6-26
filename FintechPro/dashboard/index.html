@@ -32,7 +32,7 @@
             </div>
              </div>
               <div class="bootom-left-content">
-                <button>+ Add Transition</button>
+                <button id="addBtn">+ Add Transition</button>
               </div>
         </div>
         
@@ -99,5 +99,82 @@
         </div>
          <!-- rightbar -->
      </div>
+     <!-- Add Transaction Modal -->
+
+<div class="modal" id="transactionModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h2>Add Transaction</h2>
+
+            <button id="closeModal  closeBtn">&times;</button>
+
+        </div>
+
+        <form id="transactionForm">
+
+            <label>Type</label>
+
+            <select id="type">
+
+                <option>Expense</option>
+                <option>Income</option>
+
+            </select>
+
+            <label>Description</label>
+
+            <input
+            type="text"
+            id="description"
+            placeholder="Amazon, Salary">
+
+            <div class="row">
+
+                <div>
+
+                    <label>Amount</label>
+
+                    <input
+                    type="number"
+                    id="amount">
+
+                </div>
+
+                <div>
+
+                    <label>Date</label>
+
+                    <input
+                    type="date"
+                    id="date">
+
+                </div>
+
+            </div>
+
+            <label>Category</label>
+
+            <select id="category">
+
+                <option>Food</option>
+                <option>Shopping</option>
+                <option>Salary</option>
+
+            </select>
+
+            <button id="saveBtn">
+
+                Save Transaction
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 </body>
 </html>
