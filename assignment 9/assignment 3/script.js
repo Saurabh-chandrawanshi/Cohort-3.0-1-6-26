@@ -1,14 +1,4 @@
-/**
- * =====================================================================================
- * 📘 SPECIAL DOCUMENTATION FOR EVALUATOR: ATTRIBUTES VS PROPERTIES
- * =====================================================================================
- * 1. HTML Attribute -> (e.g., input.getAttribute('value'))
- * - Represents the persistent original state declared directly inside the HTML markup text.
- * - It remains static and constant even if a user types new content inside the viewport input field.
- * * 2. DOM Property -> (e.g., input.value)
- * - Represents the live, current runtime state mapped inside the active browser memory object model.
- * - It updates synchronously with every single keystroke typed by the end-user.
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -20,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let taskIdCounter = 101; // Primary tracker initialization
 
-    // =====================================================================================
+   
     // MODULE 1, 2 & 3: Task Creation, Custom Attributes, and Native Insertion APIs
-    // =====================================================================================
+  
     taskForm.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevents page reload during form interaction
 
@@ -92,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
         taskIdCounter++;
     });
 
-    // =====================================================================================
+    
     // MODULE 5 & 6: Event Handling via Single Parent Element (Event Delegation)
-    // =====================================================================================
+   
     taskListContainer.addEventListener("click", (event) => {
         const clickTarget = event.target;
         

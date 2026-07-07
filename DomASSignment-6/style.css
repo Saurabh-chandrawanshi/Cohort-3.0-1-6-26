@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main-container{
+    width: 100%;
+    height: 100%-30px;
+    background: #000;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  padding: 1px;
+  
+}
+nav{
+    background: #07ea53a8;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+section{
+    background:#ffffff;
+    width: 100%;
+    height: 100%;
+    margin-left:200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+top-navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+/* card one */
+.card-1{
+    background: #e70909;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    /* height: 100px; */
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     border-radius: 10px;
+}
+.input-1{
+display: flex;
+flex-direction: column;
+}
+#addTask{
+width: 180px;
+padding: 10px;
+border-radius: 10px;
+border: none;
+color: #ffffff;
+background: #000;
+font-weight: 700;
+}
+.input-2{
+    display: flex;
+    flex-direction: column;
+}
+.inputs input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    color: #000;
+
+}
+.inputs input:hover{
+    transition: all ease 0.3s;
+    background: #77777713;
+    color: #00000094;
+}
+#category{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+
+}
+.inputs label{
+    font-weight: 500;
+}
+/* card 2 */
+.card-2{
+    background: #b1d709;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    /* height: 100px; */
+}
+.content-Task{
+    background: #ffff;
+    padding: 10px;
+    border-radius: 10px;
+
+
+}
+.card-3{
+    background: #08ed3d;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    /* height: 100px; */
+}
+.Grandpapa{
+    background: #dad489c2;
+     border: 2px dashed black;
+     padding: 20px;
+     border-radius: 10px;
+     margin-top:10px ;
+}
+.Parent-Container{
+    background: #88cb97;
+    border: 2px dashed black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.child-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    color: #fff;
+    font-weight: 700;
+    background: #000;
+}
+.card-4{
+    background: #e7dc09;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    /* height: 100px; */
+}
+.multidiv-tree{
+    background: #b1d709;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.div-1{
+width: 30%;
+background-color: #e76609;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.inner-div{
+    background: #08e34695;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px dashed #000;
+}
+.inner-div-small{
+font-size: 20px;
+}
+.div-2{
+width: 5%;
+background-color: #1ce709;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.div-3{
+width: 30%;
+background-color: #09bee7;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.div-4{
+width: 5%;
+background-color: #3d09e7;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.div-5{
+width: 30%;
+background-color: #e709cd;
+display: flex;
+justify-content: center;
+align-items: center;
+}

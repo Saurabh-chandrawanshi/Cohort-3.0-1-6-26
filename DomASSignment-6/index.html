@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-manipulation</title>
+    <!-- css -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- main-container -->
+      <nav><h1>top-navbar</h1></nav>
+     <div class="main-container">
+        
+        <section>
+            <top-navbar>
+                <!-- first card -->
+                <div class="card-1">
+                    <h1>Task Creation Module </h1>
+                    <div class="inputs">
+                        <div class="input-1">
+                            <label for="titile">Task Title Input:</label>
+                        <input type="text" placeholder="What Is On Your Mood?">
+                        </div>
+                        <div class="input-2">
+                             <label for="titile">Category Dropdown</label>
+                        <select name="category" id="category">
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="urgent">urgent</option>
+                        </select>
+                        </div>
+                        <button id="addTask">Add Task Button</button>
+                    </div>
+                   
+                </div>
+                <!-- second card -->
+                <div class="card-2">
+                    <div class="heading-task-board">
+                        <h1>Task Board</h1>
+
+                    </div>
+                    <div class="content-Task">
+                     <h1>Name</h1>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card-3">
+                    <h1>Event Propagation Demonstration</h1>
+                    <p>Click the Child Button below and open your browser's Developer Tools Console (F12) to see the execution order for Bubbling and Capturing.</p>
+                    <div class="Grandpapa">
+                        <h3>GrandPerent</h3>
+                        <div class="Parent-Container">
+                            <h3>Perent</h3>
+                            <button class="child-btn">Chiled Button</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-4">
+                    <div class="heading"><h1>Browser Rendering Pipeline Section</h1></div>
+                    <p>Visual flow diagram explaining how a browser converts HTML and CSS into a live Render Tree.</p>
+                    <div class="multidiv-tree">
+                        <div class="div-1">
+                            <div class="inner-div">
+                                1
+                            </div>
+                            <div class="inner-div-small">
+                                1
+                            </div>
+                            <div class="inner-div">
+                                1
+                            </div>
+                            <div class="inner-div-small">
+                                1
+                            </div>
+                            <div class="inner-div">
+                                1
+                            </div>
+                            <div class="inner-div-small">
+                                1
+                            </div>
+                            <div class="inner-div">
+                                1
+                            </div>
+
+                        </div>
+                        <div class="div-2">2</div>
+                        <div class="div-3">
+                             <div class="inner-div">
+                                1
+                            </div>
+                            <div class="inner-div-small">
+                                1
+                            </div>
+                            <div class="inner-div">
+                                1
+                            </div>
+                        </div>
+                        <div class="div-4">4</div>
+                        <div class="div-5">
+                             <div class="inner-div">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </top-navbar>
+        </section>
+     </div>
+</body>
+</html>
