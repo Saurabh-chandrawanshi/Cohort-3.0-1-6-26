@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let taskIdCounter = 101; // Primary tracker initialization
 
    
-    // MODULE 1, 2 & 3: Task Creation, Custom Attributes, and Native Insertion APIs
+    // Task Creation, Custom Attributes, and Native Insertion APIs
   
     taskForm.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevents page reload during form interaction
@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (taskTitleText.trim() === "") return;
 
-        // Requirement 1: Constructing root card element node via createElement()
+        //  Constructing root card element node via createElement()
         const taskCard = document.createElement("div");
         taskCard.classList.add("task-card");
 
-        // Requirement 2: Binding Custom Metadata parameters onto HTML dataset Attributes
+        // Binding Custom Metadata parameters onto HTML dataset Attributes
         taskCard.setAttribute("data-id", taskIdCounter);
         taskCard.setAttribute("data-status", "pending");
         taskCard.setAttribute("data-category", taskCategoryText);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const taskInfoWrapper = document.createElement("div");
         taskInfoWrapper.classList.add("task-info");
 
-        // Requirement 1: Creating explicit nodes with createTextNode() & appendChild()
+        // Creating explicit nodes with createTextNode() & appendChild()
         const h4Title = document.createElement("h4");
         const titleTextNode = document.createTextNode(taskTitleText);
         h4Title.appendChild(titleTextNode);
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         taskInfoWrapper.append(h4Title, smallMeta);
 
-        // Requirement 3: DOM Manipulation Controls (Edit, Complete, Delete Buttons)
+        // DOM Manipulation Controls (Edit, Complete, Delete Buttons)
         const actionsWrapper = document.createElement("div");
         actionsWrapper.classList.add("task-actions");
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     
-    // MODULE 5 & 6: Event Handling via Single Parent Element (Event Delegation)
+    //  Event Handling via Single Parent Element (Event Delegation)
    
     taskListContainer.addEventListener("click", (event) => {
         const clickTarget = event.target;
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             activeCardNode.remove();
         }
 
-        // Action 2: Toggle Status via Attribute Modification -> getAttribute() & setAttribute()
+        //  Toggle Status via Attribute Modification -> getAttribute() & setAttribute()
         if (clickTarget.classList.contains("complete-btn")) {
             const currentStatus = activeCardNode.getAttribute("data-status");
             if (currentStatus === "pending") {
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        // Action 3: Edit Title Operation via Node Swapping -> replaceWith()
+        //  Edit Title Operation via Node Swapping -> replaceWith()
         if (clickTarget.classList.contains("edit-btn")) {
             const staticHeading = activeCardNode.querySelector("h4");
             const newDescription = prompt("Edit your task details below:", staticHeading.innerText);
@@ -124,9 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // =====================================================================================
-    // MODULE 4: Application Theme Toggle (classList, dataset, setAttribute integration)
-    // =====================================================================================
+    
+    // Application Theme Toggle (classList, dataset, setAttribute integration)
+   
     themeToggleBtn.addEventListener("click", () => {
         const activeTheme = rootDoc.getAttribute("data-theme");
         const calculatedTargetTheme = activeTheme === "dark" ? "light" : "dark";
@@ -138,14 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.toggle("light-mode-active", calculatedTargetTheme === "light");
     });
 
-    // =====================================================================================
-    // MODULE 7: Event Propagation Engine (Capturing vs Bubbling Phase Logging)
-    // =====================================================================================
+  
+    //  Event Propagation Engine (Capturing vs Bubbling Phase Logging)
+   
     const gpElement = document.getElementById("grandparent");
     const pElement = document.getElementById("parent");
     const cButton = document.getElementById("child-btn");
 
-    // PHASE A: Capturing Listeners (Third argument explicitly configured to true)
+    //Capturing Listeners (Third argument explicitly configured to true)
     gpElement.addEventListener("click", () => {
         console.log("CAPTURE PHASE ➔ Grandparent Node Intercepted Event");
     }, true);

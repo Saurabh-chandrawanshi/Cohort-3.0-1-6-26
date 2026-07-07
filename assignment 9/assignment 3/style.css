@@ -50,13 +50,40 @@ body {
     gap: 15px;
 }
 
-h1 { font-size: 1.5rem; margin: 0; font-weight: 800; letter-spacing: -0.5px; }
-.sub-text { color: var(--color-primary); font-weight: 400; }
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
 
-.assignment-meta { display: flex; align-items: center; gap: 10px; }
-.badge { font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; font-weight: bold; }
-.cohort { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
-.total-points { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.sub-text {
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.assignment-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cohort {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.total-points {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
 
 .btn-theme {
     background: var(--border-color);
@@ -78,8 +105,13 @@ h1 { font-size: 1.5rem; margin: 0; font-weight: 800; letter-spacing: -0.5px; }
 }
 
 @media(min-width: 768px) {
-    .main-layout { grid-template-columns: 4fr 6fr; }
-    .propagation-panel, .pipeline-panel { grid-column: span 2; }
+    .main-layout {
+        grid-template-columns: 4fr 6fr;
+    }
+
+    .propagation-panel, .pipeline-panel {
+        grid-column: span 2;
+    }
 }
 
 section {
@@ -90,54 +122,202 @@ section {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-h2 { font-size: 1.2rem; margin-top: 0; font-weight: 700; margin-bottom: 10px; }
-.section-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-.form-field { margin-bottom: 16px; }
-.form-field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
+.section-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
 .form-field input, .form-field select {
-    width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);
-    background-color: var(--bg-input); color: var(--text-primary); box-sizing: border-box; font-size: 0.95rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    box-sizing: border-box;
+    font-size: 0.95rem;
 }
 
 .btn {
-    padding: 10px 16px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
-.btn-primary { background-color: var(--color-primary); color: #fff; width: 100%; }
-.btn-success { background-color: var(--color-success); color: #fff; }
-.btn-warning { background-color: var(--color-warning); color: #fff; }
-.btn-danger { background-color: var(--color-danger); color: #fff; }
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    width: 100%;
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: var(--color-warning);
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: #fff;
+}
 
 /* Dynamic Task Cards UI styling */
 .task-card {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-left: 5px solid var(--color-primary);
-    padding: 16px; border-radius: 8px; margin-bottom: 12px;
-    display: flex; justify-content: space-between; align-items: center; gap: 15px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
-.task-card[data-status="completed"] { border-left-color: var(--color-success); opacity: 0.6; }
-.task-card[data-status="completed"] h4 { text-decoration: line-through; color: var(--text-muted); }
+.task-card[data-status="completed"] {
+    border-left-color: var(--color-success);
+    opacity: 0.6;
+}
 
-.task-card h4 { margin: 0 0 4px 0; font-size: 1.05rem; }
-.task-meta-info { font-size: 0.75rem; color: var(--text-muted); display: block; }
-.task-actions { display: flex; gap: 6px; }
-.task-actions .btn { padding: 6px 10px; font-size: 0.75rem; }
+.task-card[data-status="completed"] h4 {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.task-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+}
+
+.task-meta-info {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions .btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+}
 
 /* Propagation Demonstration Boxes */
-.bubble-box { padding: 25px; border: 2px dashed var(--border-color); border-radius: 8px; margin-top: 15px; position: relative; }
-.gp { background-color: rgba(59, 130, 246, 0.03); }
-.p { background-color: rgba(245, 158, 11, 0.03); }
-.box-label { font-size: 0.7rem; font-weight: bold; color: var(--text-muted); display: block; margin-bottom: 10px; text-transform: uppercase; }
-.btn-child { background-color: var(--text-primary); color: var(--bg-main); }
+.bubble-box {
+    padding: 25px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.gp {
+    background-color: rgba(59, 130, 246, 0.03);
+}
+
+.p {
+    background-color: rgba(245, 158, 11, 0.03);
+}
+
+.box-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.btn-child {
+    background-color: var(--text-primary);
+    color: var(--bg-main);
+}
 
 /* Beautiful Rendering Pipeline Visualizer Layout */
-.pipeline-flow-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
-.pipeline-column { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 150px; gap: 6px; }
-.step-card { background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; text-align: center; font-size: 0.8rem; width: 100%; box-sizing: border-box; }
-.header-step { background: rgba(59, 130, 246, 0.1); border-color: var(--color-primary); font-weight: bold; }
-.model-step { background: rgba(245, 158, 11, 0.1); border-color: var(--color-warning); font-weight: bold; }
-.final-step { background: rgba(16, 185, 129, 0.2); border-color: var(--color-success); font-weight: bold; font-size: 0.85rem; }
-.flow-arrow { font-size: 12px; color: var(--text-muted); }
-.pipeline-operator { font-size: 1.2rem; font-weight: bold; }
+.pipeline-flow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.pipeline-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 150px;
+    gap: 6px;
+}
+
+.step-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-step {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--color-primary);
+    font-weight: bold;
+}
+
+.model-step {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--color-warning);
+    font-weight: bold;
+}
+
+.final-step {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--color-success);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.flow-arrow {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.pipeline-operator {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
