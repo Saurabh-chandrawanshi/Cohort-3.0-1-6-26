@@ -3,227 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FinTrack Pro</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <title>Fin Tech Pro</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
+    <!-- main-container -->
     <div class="main-container">
-      <!-- Sidebar -->
-      <aside class="right-navbar">
+      <!--right-navbar  -->
+      <div class="right-navbar">
         <div class="left-top-navbar">
-          <div class="logo-fix">
-            <div class="logo-nav">
-              <img src="../assets/image.png" alt="Logo" />
-            </div>
+          <div class="logo-nav">
+            <img src="../assets/image.png" alt="logo-image" />
           </div>
-
           <div class="dashboard">
-            <h3>Dashboard</h3>
+            <h3><a href="../dashboard/index.html">Dashboard</a></h3>
           </div>
-
           <div class="settig-icon">
-            <h3>
-              <a href="../setting/index.html">Settings</a>
-            </h3>
+            <h3>Settings</h3>
           </div>
         </div>
-
         <div class="bootom-left-content">
-          <button id="addBtn">+ Add Transaction</button>
+          <button>+ Add Transition</button>
         </div>
-      </aside>
+      </div>
 
-      <!-- Main Content -->
-
-      <main class="left-navbar">
+      <!-- left-navbar -->
+      <div class="left-navbar">
         <div class="top-nav">
-          <p id="userName">Saurabh</p>
-
-          <button id="logoutBtn">Logout</button>
+          <p>top-nav</p>
+          <button>Logout</button>
         </div>
-
         <div class="down-nav">
-          <!-- Top -->
-
-          <section class="top-content">
-            <div class="top-heading">
-              <h3>Financial Overview</h3>
-
-              <p>Real-time tracking application</p>
-            </div>
-
-            <div class="bottom-box">
-              <div class="flex-box">
-                <div class="logo">💰</div>
-
-                <h3 >Current Balance</h3>
-
-                <h1 id="balance">$0.00</h1>
-              </div>
-
-              <div class="flex-box">
-                <div class="logo">📈</div>
-
-                <h3>Total Income</h3>
-
-                <h1 id="income">$0.00</h1>
-              </div>
-
-              <div class="flex-box">
-                <div class="logo">📉</div>
-
-                <h3>Total Expense</h3>
-
-                <h1 id="expense">$0.00</h1>
-              </div>
-
-              <div class="flex-box">
-                <div class="logo">📋</div>
-
-                <h3>Total Transactions</h3>
-
-                <h1 id="count">0</h1>
-              </div>
-            </div>
-          </section>
-
-          <!-- Center -->
-
-          <section class="center-content">
+          <p></p>
+          <div class="top-content-setting">
+            <h1>Settings</h1>
+            <p>Manage your account profile and app formatting</p>
+          </div>
+          <div class="center-content blue">
             <div class="left-content">
-              <h2>Cash Flow Analysis</h2>
+              <h2>Profile Details</h2>
 
-              <canvas id="chart"></canvas>
-            </div>
+              <div class="input-fild">
+                <div class="fullname">
+                  <label for="FullName"> Full Name</label>
+                  <input type="text" />
+                </div>
 
-            <div class="right-content">
-              <h2>Preferences</h2>
+                <div class="currency">
+                  <label for="currency">Primary Currency</label>
 
-              <div class="mode">
-                <h3>Dark Mode</h3>
-
-         <label class="switch">
-        <input type="checkbox" id="themeToggle">
-        <span class="slider"></span>
-    </label>
-
-   
-    <!-- <button id="theme-btn">
-       
-    </button> -->
+                  <select id="city" name="city">
+                    <option value="">USD($)</option>
+                    <option value="indore">Indore</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="jabalpur">Jabalpur</option>
+                    <option value="seoni">Seoni</option>
+                  </select>
+                </div>
 
               </div>
-
-              <div class="reset-button">
-                <button id="resetBtn">Reset All Data</button>
+              <div class="save-change-button">
+                <button>Save Changes</button>
               </div>
-            </div>
-          </section>
-
-          <!-- Bottom -->
-
-          <section class="bottom-content">
-            <div class="bottom-footer-content">
-              <h1>All Transactions</h1>
-
-              <table id="transactionTable">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Date</th>
-                    <th>Category</th>
-                  </tr>
-                </thead>
-
-                <tbody id="transactionList"></tbody>
-              </table>
-            </div>
-          </section>
-        </div>
-      </main>
-    </div>
-
-    <!-- ================= MODAL ================= -->
-
-    <div class="modal" id="transactionModal">
-      <div class="modal-box">
-        <div class="modal-header">
-          <h2>Add Transaction</h2>
-
-          <button id="closeModal">&times;</button>
-        </div>
-
-        <form id="transactionForm">
-          <label>Type</label>
-
-          <select id="type">
-            <option value="Expense">Expense</option>
-
-            <option value="Income">Income</option>
-          </select>
-
-          <label>Description</label>
-
-          <input
-            type="text"
-            id="description"
-            placeholder="Amazon, Salary, Coffee"
-          />
-
-          <div class="row">
-            <div>
-              <label>Amount</label>
-
-              <input type="number" id="amount" />
-            </div>
-
-            <div>
-              <label>Date</label>
-
-              <input type="date" id="date" />
             </div>
           </div>
-
-          <label>Category</label>
-
-          <select id="category">
-            <option value="">Select Category</option>
-
-            <option>Food & Dining</option>
-
-            <option>Shopping</option>
-
-            <option>Recharge & Bills</option>
-
-            <option>Petrol & Auto</option>
-
-            <option>Utilities</option>
-
-            <option>Salary</option>
-
-            <option>Entertainment</option>
-
-            <option>Other</option>
-          </select>
-
-          <button type="submit" id="saveBtn">Save Transaction</button>
-        </form>
+        </div>
       </div>
+      <!-- rightbar -->
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>

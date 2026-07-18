@@ -1,0 +1,1501 @@
+/* ===========================
+        ROOT VARIABLES
+=========================== */
+
+:root {
+
+    /* Background */
+
+    --background: #F8F9FB;
+    --card: #FFFFFF;
+
+    /* Border */
+
+    --border: #E5E7EB;
+    --input-border: #D1D5DB;
+
+    /* Text */
+
+    --heading: #111827;
+    --body: #4B5563;
+    --muted: #6B7280;
+
+    /* Primary */
+
+    --blue: #2563EB;
+    --blue-light: #DBEAFE;
+
+    /* Success */
+
+    --green: #15803D;
+    --green-light: #DCFCE7;
+
+    /* Danger */
+
+    --red: #B91C1C;
+    --red-light: #FEE2E2;
+
+    /* Black */
+
+    --black: #000000;
+    --black-hover: #1F2937;
+
+    /* White */
+
+    --white: #FFFFFF;
+
+}
+
+
+/* ===========================
+        RESET
+=========================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+}
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+
+}
+
+
+/* ===========================
+      MAIN CONTAINER
+=========================== */
+
+.main-container {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* ===========================
+        SIDEBAR
+=========================== */
+
+.right-navbar {
+
+    width: 280px;
+
+    background: var(--white);
+
+    border-right: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+/* ===========================
+      SIDEBAR TOP
+=========================== */
+
+.left-top-navbar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px;
+
+    gap: 25px;
+
+}
+
+
+/* ===========================
+         LOGO
+=========================== */
+
+.logo-nav {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.logo-nav img {
+
+    width: 210px;
+
+}
+
+
+/* ===========================
+     SIDEBAR BUTTONS
+=========================== */
+
+.dashboard,
+.settig-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 22px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.dashboard {
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+
+    font-weight: 600;
+
+}
+
+
+.dashboard:hover {
+
+    background: #CFE2FF;
+
+}
+
+
+.settig-icon {
+
+    color: var(--body);
+
+}
+
+
+.settig-icon:hover {
+
+    background: #F3F4F6;
+
+}
+
+
+.settig-icon a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* ===========================
+      ADD BUTTON
+=========================== */
+
+.bootom-left-content {
+
+    padding: 28px;
+
+}
+
+
+.bootom-left-content button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.bootom-left-content button:hover {
+
+    background: var(--black-hover);
+
+}
+
+
+/* ===========================
+      RIGHT CONTENT AREA
+=========================== */
+
+.left-navbar {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--background);
+
+}
+
+/* ===================================
+        TOP NAVBAR
+=================================== */
+
+.top-nav {
+
+    height: 70px;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 30px;
+
+}
+
+.top-nav p {
+
+    color: var(--heading);
+
+    font-weight: 600;
+
+}
+
+.top-nav button {
+
+    padding: 10px 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--input-border);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.top-nav button:hover {
+
+    background: #F3F4F6;
+
+}
+
+
+
+/* ===================================
+        DASHBOARD BODY
+=================================== */
+
+.down-nav {
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+
+/* ===================================
+       FINANCIAL OVERVIEW
+=================================== */
+
+.top-heading {
+
+    margin-bottom: 25px;
+
+}
+
+.top-heading h3 {
+
+    font-size: 34px;
+
+    color: var(--heading);
+
+    font-weight: 800;
+
+}
+
+.top-heading p {
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+}
+
+
+
+/* ===================================
+        SUMMARY CARDS
+=================================== */
+
+.bottom-box {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+
+/* ===================================
+            CARD
+=================================== */
+
+.flex-box {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    transition: .3s;
+
+}
+
+.flex-box:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+
+/* ===================================
+            CARD ICON
+=================================== */
+
+.logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 14px;
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+}
+
+
+
+/* ===================================
+        CARD TEXT
+=================================== */
+
+.flex-box h3 {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+.flex-box h1 {
+
+    color: var(--heading);
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* ===================================
+        CENTER CONTENT
+=================================== */
+
+.center-content {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+
+/* ===================================
+       CASH FLOW CARD
+=================================== */
+
+.left-content {
+
+    flex: 2;
+
+    min-height: 320px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+}
+
+.left-content h2 {
+
+    font-size: 22px;
+
+    color: var(--heading);
+
+}
+
+
+
+/* ===================================
+        PREFERENCES CARD
+=================================== */
+
+.right-content {
+
+    width: 320px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.right-content h2 {
+
+    color: var(--heading);
+
+}
+
+
+
+/* ===================================
+         DARK MODE
+=================================== */
+
+.mode {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.mode h3 {
+
+    color: var(--body);
+
+}
+
+
+
+/* ===================================
+        RESET BUTTON
+=================================== */
+
+.reset-button {
+
+    margin-top: 25px;
+
+}
+
+.reset-button button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: var(--red-light);
+
+    color: var(--red);
+
+    border: 1px solid #FECACA;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.reset-button button:hover {
+
+    background: #FCDDDD;
+
+}
+
+/* ===================================
+        TRANSACTION SECTION
+=================================== */
+
+.bottom-content {
+
+    width: 100%;
+
+}
+
+.bottom-footer-content {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+}
+
+.bottom-footer-content h1 {
+
+    font-size: 26px;
+
+    color: var(--heading);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* ===================================
+        TABLE
+=================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+thead {
+
+    background: #F9FAFB;
+
+}
+
+th {
+
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    color: var(--muted);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+td {
+
+    padding: 18px 15px;
+
+    border-bottom: 1px solid #EEEEEE;
+
+    color: var(--body);
+
+}
+
+tbody tr:hover {
+
+    background: #F8FAFC;
+
+}
+
+
+
+/* ===================================
+        MODAL BACKGROUND
+=================================== */
+
+.modal {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: rgba(0, 0, 0, .45);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+
+}
+
+
+
+/* ===================================
+        MODAL BOX
+=================================== */
+
+.modal-box {
+
+    width: 520px;
+
+    background: var(--white);
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    animation: popup .25s ease;
+
+}
+
+
+
+/* ===================================
+        POPUP ANIMATION
+=================================== */
+
+@keyframes popup {
+
+    from {
+
+        transform: scale(.85);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* ===================================
+        MODAL HEADER
+=================================== */
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.modal-header h2 {
+
+    font-size: 28px;
+
+    color: var(--heading);
+
+}
+
+
+
+/* ===================================
+        CLOSE BUTTON
+=================================== */
+
+#closeModal {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #F3F4F6;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#closeModal:hover {
+
+    background: #E5E7EB;
+
+}
+
+
+
+/* ===================================
+        FORM
+=================================== */
+
+#transactionForm {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* ===================================
+        LABEL
+=================================== */
+
+label {
+
+    margin-bottom: 8px;
+
+    margin-top: 15px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: var(--heading);
+
+}
+
+
+
+/* ===================================
+        INPUT
+=================================== */
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid var(--input-border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+input:focus,
+select:focus {
+
+    border-color: var(--blue);
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .15);
+
+}
+
+
+
+/* ===================================
+        ROW
+=================================== */
+
+.row {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.row div {
+
+    flex: 1;
+
+}
+
+
+
+/* ===================================
+        SAVE BUTTON
+=================================== */
+
+#saveBtn {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#saveBtn:hover {
+
+    background: var(--black-hover);
+
+}
+
+
+
+/* ===================================
+        BADGES
+=================================== */
+
+.income {
+
+    color: #15803D;
+
+    font-weight: 600;
+
+}
+
+.expense {
+
+    color: #DC2626;
+
+    font-weight: 600;
+
+}
+
+
+
+/* ===================================
+        DELETE BUTTON
+=================================== */
+
+.delete-btn {
+
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #FEE2E2;
+
+    color: #B91C1C;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.delete-btn:hover {
+
+    background: #FECACA;
+
+}
+
+/* ==========================================
+            SMOOTH SCROLL
+========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==========================================
+            ANIMATIONS
+========================================== */
+
+* {
+
+    transition:
+        background .3s,
+        color .3s,
+        border .3s,
+        transform .3s,
+        box-shadow .3s;
+
+}
+
+
+/* ==========================================
+            CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #F3F4F6;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #C7C7C7;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #9CA3AF;
+
+}
+
+
+/* ==========================================
+            BUTTON ANIMATION
+========================================== */
+
+button {
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+
+/* ==========================================
+            CARD ANIMATION
+========================================== */
+
+.flex-box {
+
+    animation: fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+            MODAL RESPONSIVE
+========================================== */
+
+@media(max-width:700px) {
+
+    .modal-box {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+
+}
+
+
+/* ==========================================
+            TABLE RESPONSIVE
+========================================== */
+
+.bottom-footer-content {
+
+    overflow-x: auto;
+
+}
+
+table {
+
+    min-width: 750px;
+
+}
+
+
+/* ==========================================
+            LAPTOP
+========================================== */
+
+@media(max-width:1200px) {
+
+    .bottom-box {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:900px) {
+
+    .main-container {
+
+        flex-direction: column;
+
+    }
+
+    .right-navbar {
+
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+
+    }
+
+    .left-top-navbar {
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .bootom-left-content {
+
+        padding: 20px;
+
+    }
+
+    .center-content {
+
+        flex-direction: column;
+
+    }
+
+    .left-content {
+
+        width: 100%;
+
+    }
+
+    .right-content {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:600px) {
+
+    .top-nav {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 15px;
+
+        gap: 10px;
+
+    }
+
+    .bottom-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .logo-nav img {
+
+        width: 150px;
+
+    }
+
+    .top-heading h3 {
+
+        font-size: 26px;
+
+    }
+
+    .top-heading p {
+
+        font-size: 14px;
+
+    }
+
+    .row {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* ==========================================
+            DARK MODE
+========================================== */
+
+.dark {
+
+    background: #111827;
+
+    color: #FFFFFF;
+
+}
+
+.dark .left-navbar {
+
+    background: #111827;
+
+}
+
+.dark .right-navbar {
+
+    background: #1F2937;
+
+}
+
+.dark .top-nav {
+
+    background: #1F2937;
+
+}
+
+.dark .flex-box {
+
+    background: #1F2937;
+
+    border: 1px solid #374151;
+
+}
+
+.dark .left-content {
+
+    background: #1F2937;
+
+}
+
+.dark .right-content {
+
+    background: #1F2937;
+
+}
+
+.dark .bottom-footer-content {
+
+    background: #1F2937;
+
+}
+
+.dark .modal-box {
+
+    background: #1F2937;
+
+}
+
+.dark input,
+
+.dark select {
+
+    background: #374151;
+
+    color: white;
+
+    border: 1px solid #4B5563;
+
+}
+
+.dark table {
+
+    color: white;
+
+}
+
+.dark thead {
+
+    background: #374151;
+
+}
+
+.dark tbody tr:hover {
+
+    background: #374151;
+
+}
+
+.dark button {
+
+    color: white;
+
+}
+
+
+/* ==========================================
+            DARK MODE ICON
+========================================== */
+
+#darkMode {
+
+    cursor: pointer;
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+/* ==========================================
+            HOVER EFFECT
+========================================== */
+
+.logo {
+
+    transition: .3s;
+
+}
+
+.flex-box:hover .logo {
+
+    transform: rotate(10deg) scale(1.1);
+
+}
+
+
+/* ==========================================
+            INPUT HOVER
+========================================== */
+
+input:hover,
+
+select:hover {
+
+    border-color: var(--blue);
+
+}
+
+
+/* ==========================================
+            PAGE LOADER EFFECT
+========================================== */
+
+body {
+
+    animation: pageLoad .4s ease;
+
+}
+
+@keyframes pageLoad {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+/* dark mode wali button ke lye */
+
+body.dark{
+    background:#121212;
+    color:#fff;
+}
+
+/* Switch */
+
+.switch{
+    position:relative;
+    width:42px;
+    height:24px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+    inset:0;
+    background:#d9d9d9;
+    border-radius:50px;
+    transition:0.3s;
+}
+
+.slider::before{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    left:3px;
+    top:3px;
+    background:#fff;
+    border-radius:50%;
+    transition:0.3s;
+    box-shadow:0 2px 5px rgba(0,0,0,.25);
+}
+
+input:checked + .slider{
+    background:#4CAF50;
+}
+
+input:checked + .slider::before{
+    transform:translateX(18px);
+}
